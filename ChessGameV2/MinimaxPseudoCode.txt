@@ -1,0 +1,16 @@
+function minimax(position, depth, alpha, beta, isMaximisingPlayer)
+	if depth == 0 or game over in position
+		return evalaluation of position
+	
+	if isMaximisingPlayer
+		maxEval = -infinity
+		for each child of position
+			eval = minimax(child, depth-1, alpha, beta, False)
+			maxEval = max(maxEval, eval)
+		return maxEval
+	else
+		minEVal = +infinity
+		for each child of position
+			eval = minimax(child, depth-1, alpha, beta, True)
+			minEval = min(minEval, eval)
+		return minEval
